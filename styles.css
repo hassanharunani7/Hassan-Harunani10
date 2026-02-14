@@ -1823,9 +1823,14 @@ section {
         grid-template-columns: 1fr;
     }
 	
-		.flex-container {
-  display: flex;
-  justify-content: center; 
+.flex-container {
+    display: block;
+    margin: 40px auto;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+}
+
 }
 
 }
@@ -2189,4 +2194,5 @@ section {
         padding: 12px;
         font-size: 0.95rem;
     }
+
 }
