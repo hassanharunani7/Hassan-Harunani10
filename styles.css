@@ -2256,6 +2256,27 @@ section {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image {
+    width: 90%;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
 
 
