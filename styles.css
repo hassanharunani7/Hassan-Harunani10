@@ -2345,8 +2345,49 @@ h2.section-title {
 }
 
 
+/* ==========================================
+   HERO FADE-IN ANIMATION
+   ========================================== */
+
+.hero-left {
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-right {
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
+
+/* ==========================================
+   FLOATING HERO IMAGE
+   ========================================== */
+
+.hero-right img {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
 
 
