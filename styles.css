@@ -1437,7 +1437,7 @@ section {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 per row */
-    gap: 20px;
+    gap: 25px;
     margin-top: 40px;
 }
 
@@ -2343,6 +2343,7 @@ h2.section-title {
 .project-card:hover {
     transform: translateY(-5px);
 }
+
 
 
 
