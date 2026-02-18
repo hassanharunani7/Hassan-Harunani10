@@ -209,7 +209,16 @@ body {
     display: flex;
     align-items: center;
     padding: 0 5%;
-    background: linear-gradient(135deg, #0d5ea6, #ff6b3d);
+    background: linear-gradient(
+        135deg,
+        #003f88 0%,
+        #0077cc 45%,
+        #ff6b3d 100%
+    );
+}
+
+}
+
     color: white;
 }
 
@@ -2319,6 +2328,7 @@ h2.section-title {
 .project-card:hover {
     transform: translateY(-5px);
 }
+
 
 
 
