@@ -395,6 +395,56 @@ body {
     font-size: 1.1rem;
 }
 
+
+/* ==========================================
+   HERO SECTION LAYOUT
+   ========================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-right {
+        margin-top: 30px;
+    }
+}
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* ============================================
    SECTION STYLES
    ============================================ */
@@ -2390,6 +2440,7 @@ h2.section-title {
 .project-card:hover {
     transform: translateY(-5px);
 }
+
 
 
 
