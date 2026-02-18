@@ -252,6 +252,78 @@ body {
     }
 }
 
+
+/* ==========================================
+   HERO TEXT STYLING
+   ========================================== */
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero .subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.hero .description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: white;
+}
+.hero h1 {
+    font-size: 3.5rem;
+}
+
+
+/* ==========================================
+   HERO BUTTONS
+   ========================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Orange filled button */
+.btn-primary {
+    background-color: #ff6b3d;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e85a2e;
+}
+
+/* White outline button */
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #0d5ea6;
+}
+@media (max-width: 900px) {
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
 /* ============================================
    SECTION STYLES
    ============================================ */
@@ -2247,6 +2319,7 @@ h2.section-title {
 .project-card:hover {
     transform: translateY(-5px);
 }
+
 
 
 
