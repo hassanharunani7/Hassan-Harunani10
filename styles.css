@@ -1476,6 +1476,43 @@ section {
     font-style: italic;
 }
 
+
+/* ==========================================
+   GALLERY SECTION
+   ========================================== */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 900px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* ============================================
    CONTACT SECTION
    ============================================ */
@@ -2353,5 +2390,6 @@ h2.section-title {
 .project-card:hover {
     transform: translateY(-5px);
 }
+
 
 
