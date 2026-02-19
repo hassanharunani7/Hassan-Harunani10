@@ -982,3 +982,4 @@ imageCards.forEach(card => {
     });
 });
 
+
