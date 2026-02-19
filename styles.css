@@ -1,13 +1,6 @@
 /* ============================================
    HASSAN HARUNANI PORTFOLIO - STYLES
    ============================================ */
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-}
-html {
-    scroll-behavior: smooth;
-}
 
 :root {
     --primary-color: #0066cc;
