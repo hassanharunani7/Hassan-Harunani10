@@ -1,3 +1,7 @@
+body {
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
 /* ============================================
    HASSAN HARUNANI PORTFOLIO - STYLES
    ============================================ */
@@ -2561,6 +2565,57 @@ h2.section-title {
 }
 
 
+/* ==========================================
+   DARK MODE TOGGLE BUTTON
+   ========================================== */
+
+.theme-toggle {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: white;
+    color: black;
+}
+
+
+/* ==========================================
+   DARK MODE STYLES
+   ========================================== */
+
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode .navbar {
+    background: #1e293b;
+}
+
+body.dark-mode section {
+    background: transparent;
+}
+
+body.dark-mode .card,
+body.dark-mode .stat-card {
+    background: #1e293b;
+    color: white;
+}
+
+body.dark-mode .footer {
+    background: #020617;
+}
+
+body.dark-mode .section-title::after {
+    background: #38bdf8;
+}
 
 
 
