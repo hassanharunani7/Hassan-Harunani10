@@ -996,5 +996,19 @@ function toggleImage(card) {
 }
 
 
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const windowHeight = window.innerHeight;
+        const elementTop = sec.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            sec.style.opacity = "1";
+            sec.style.transform = "translateY(0)";
+        }
+    });
+});
+
 
 
