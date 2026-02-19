@@ -1,10 +1,13 @@
-html {
-    scroll-behavior: smooth;
-}
-
 /* ============================================
    HASSAN HARUNANI PORTFOLIO - STYLES
    ============================================ */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --primary-color: #0066cc;
@@ -2526,6 +2529,30 @@ h2.section-title {
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 8%;
+    }
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #ff6b3d;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
 
 
 
