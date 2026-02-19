@@ -895,3 +895,29 @@ document.querySelector("form").addEventListener("submit", function(e) {
 
 });
 
+// ==========================================
+// IMAGE LIGHTBOX FUNCTION
+// ==========================================
+
+const galleryImages = document.querySelectorAll(".image-grid img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox-close");
+
+galleryImages.forEach(image => {
+    image.addEventListener("click", () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = image.src;
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+});
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+});
+
