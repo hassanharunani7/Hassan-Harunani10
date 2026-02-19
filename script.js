@@ -982,4 +982,19 @@ imageCards.forEach(card => {
     });
 });
 
+function toggleImage(card) {
+
+    const allCards = document.querySelectorAll(".image-card");
+
+    allCards.forEach(c => {
+        if (c !== card) {
+            c.classList.remove("active");
+        }
+    });
+
+    card.classList.toggle("active");
+}
+
+
+
 
