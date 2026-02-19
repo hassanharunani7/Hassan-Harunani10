@@ -1007,7 +1007,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load saved theme
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark-mode");
-        toggleBtn.textContent = "☀️";
+        toggleBtn.textContent = "Light Mode☀️";
     }
 
     toggleBtn.addEventListener("click", function () {
@@ -1015,16 +1015,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
-            toggleBtn.textContent = "☀️";
+            toggleBtn.textContent = "Light Mode☀️";
             localStorage.setItem("theme", "dark");
         } else {
-            toggleBtn.textContent = "🌙";
+            toggleBtn.textContent = "Dark Mode🌙";
             localStorage.setItem("theme", "light");
         }
 
     });
 
 });
+
 
 
 
