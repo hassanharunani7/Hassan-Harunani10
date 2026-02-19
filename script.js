@@ -896,18 +896,29 @@ document.querySelector("form").addEventListener("submit", function(e) {
 });
 
 // ==========================================
-// IMAGE LIGHTBOX FUNCTION
+// PREMIUM LIGHTBOX SYSTEM
 // ==========================================
 
-const galleryImages = document.querySelectorAll(".image-grid img");
+const images = document.querySelectorAll(".image-grid img");
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
+const caption = document.getElementById("lightbox-caption");
 const closeBtn = document.querySelector(".lightbox-close");
+const nextBtn = document.querySelector(".lightbox-next");
+const prevBtn = document.querySelector(".lightbox-prev");
 
-galleryImages.forEach(image => {
-    image.addEventListener("click", () => {
-        lightbox.style.display = "block";
-        lightboxImg.src = image.src;
+let currentIndex = 0;
+
+function showImage(index) {
+    currentIndex = index;
+    lightbox.style.display = "flex";
+    lightboxImg.src = images[index].src;
+    caption.textContent = images[index].alt;
+}
+
+images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+        showImage(index);
     });
 });
 
@@ -915,9 +926,38 @@ closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
 });
 
+nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+});
+
+prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+});
+
+// Close if clicking outside image
 lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
         lightbox.style.display = "none";
     }
 });
+
+// Mobile Swipe Support
+let startX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+
+    if (startX - endX > 50) {
+        nextBtn.click();
+    } else if (endX - startX > 50) {
+        prevBtn.click();
+    }
+});
+
 
