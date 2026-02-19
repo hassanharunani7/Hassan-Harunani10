@@ -2564,21 +2564,7 @@ h2.section-title {
 }
 
 
-.footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 40px 10%;
-}
 
-body {
-    animation: fadePage 1s ease;
-}
-
-@keyframes fadePage {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
 
 
 
