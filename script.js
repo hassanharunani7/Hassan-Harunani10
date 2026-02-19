@@ -961,3 +961,24 @@ lightbox.addEventListener("touchend", (e) => {
 });
 
 
+// ==========================================
+// CLICK TO EXPAND IMAGE
+// ==========================================
+
+const imageCards = document.querySelectorAll(".image-card");
+
+imageCards.forEach(card => {
+    card.addEventListener("click", () => {
+
+        // Close any other expanded image
+        imageCards.forEach(c => {
+            if (c !== card) {
+                c.classList.remove("active");
+            }
+        });
+
+        // Toggle current one
+        card.classList.toggle("active");
+    });
+});
+
