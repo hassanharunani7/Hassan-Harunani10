@@ -2518,9 +2518,10 @@ h2.section-title {
 }
 
 .image-card.active img {
-    transform: scale(1.2);
+    transform: scale(1.3);
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
+
 
 
 
