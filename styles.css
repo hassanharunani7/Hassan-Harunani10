@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* ============================================
    HASSAN HARUNANI PORTFOLIO - STYLES
    ============================================ */
@@ -341,6 +345,15 @@ body {
     background-color: white;
     color: #0d5ea6;
 }
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
 @media (max-width: 900px) {
     .hero-buttons {
         justify-content: center;
@@ -1453,6 +1466,10 @@ section {
     transform: scale(1.05);
 }
 
+.image-grid img {
+    transition: 0.4s ease;
+}
+
 @media (max-width: 900px) {
     .image-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -2388,6 +2405,7 @@ h2.section-title {
         transform: translateY(-10px);
     }
 }
+
 
 
 
